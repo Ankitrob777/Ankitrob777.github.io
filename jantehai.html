@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> 💚K-means Cluster</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/blog.css">
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style media="screen">
+    body {
+      background-color: whight;
+    }
+  </style>
+</head>
+
+<body>
+  <table cellspacing="20">
+    <tr>
+      <td>
+        <h1>Rexxion A-1</h1>
+        <p> Welcome Readers! Hope you are doing absolutely fine.</p>
+        <em style="margin-left: 2rem;">Date : 24 June 2020</em>
+      </td>
+      <td><button style="margin-left: 30rem;" onclick="index()" type="button" class="btn btn-info">Back to Blog</button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <div class="heads">
+    <center>
+      <h3> K-Means Intuition:<br> Choosing the right Number <br> of Clusters</h3>
+    </center>
+    <center>
+      <p>I am going to explain how to choose right Number of clusters in k-means algorithm .<br>I will also talk about
+        Elbow method and WCSS. Send me your Feedback to robankit777@gmail.com. Lets start. </p>
+    </center>
+    <hr>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Data science problem</h1>
+      <p> So, here we have got a data science problem suppose data of customer buying a product.
+        The first variable is no of product sold and second variable is Income.
+        We have got two variables .I have taken only two variables just for understanding and simplicity.
+        So, if i have to choose the number of cluster just by seeing the graph given in the right side.
+        I will defenetly choose 3.
+        and it will looks like this </p>
+    </div>
+    <br>
+    <div class="col-lg-6">
+      <img src="images/b.png" width="100%" alt="cluster-image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="images/m.png" width="100%" alt="cluster-image">
+      <hr>
+    </div>
+    <div class="col-lg-6">
+      <br>
+      <br>
+      <br>
+      <p>The most common cluster that we will found by seeing the graph is Three. But in case
+        of more than 2 or 3 dimensions it will be complex to understand .</p>
+    </div>
+  </div>
+
+  <hr>
+  <h2>Now, In order to understand whether our algorithm will take 2 clusters or 10, we use WCSS formula and graph.</h2>
+  <img src="images/formula.png" width="100%" alt="WCSS-formula-image">
+  <p>Now, at first glance both name and formula of WCSS look a bit complex, but in reality it is super simple.<br> WCSS
+    stands
+    on <em>Within Cluster Sum of Squares.</em> It measure the squared average distance of all the points within a
+    cluster <br>
+    to the cluster centroid. In formula pi represent data points <br>
+    of cluster and c1 ,c2,c3 are centroids. To calculate <em>WCSS</em> <br>,we have to first find
+    Euclidean distance between a given point and the centroid to which it is assigned and square it. <br> Then we
+    iterate this process for all points in cluster and at last sum all the squared distances.</p>
+  <hr> <br>
+  <div class="row">
+    <div class="col-lg-6">
+      <h2>Let's checkout some cases. C: 1-Choosing one cluster</h2>
+      <p>It will looks like this, <br>And Now we can find WCSS for One cluster by Formula.</p>
+      <img src="images/c.png" width="100%" alt="cluster">
+    </div>
+    <div class="col-lg-6">
+      <h2>Let's checkout some cases C: 1-On choosing Two cluster</h2>
+      <img src="images/d.png" width="100%" alt="cluster">
+    </div>
+  </div>
+
+  <hr><br>
+
+  <h2> Ok so finally we are at a point where we will know How our algorithm decide or choose number of Cluster</h2>
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="images/g.png" width="100%" alt="Elbow-method-image">
+    </div>
+    <div class="col-lg-6">
+      <p>This is a decreasing WCSS graph for dataset or datascience problem.<br>
+        this visual chart represent how WCSS changes as we increase the number of cluster. <br>
+        WCSS starts at quite a large Number. Now look at graph and how it changes <br>
+        it decreases from 8k to 3k just when we choosen 2 cluster thats massive right.<br>
+        Later it jumps from 3k to 1k when 3 clusters choosen ,again a large drop.<br>
+        Now after that it goes from 1k to 800 then 700 and so on. As we can see first <br>
+        two changes created a huge drop in WCSS. And after that WCSS not drops at that rate(becomes linear approx)<br>
+        This is our hint to select optimal number of cluster. <br>
+        look for an Elbow in the graph and the bend point as shown in <br>
+        graph is optimal number of clusters. </p>
+    </div>
+  </div>
+  <br>
+  <h1>Feedback</h1>
+  <i onclick="like()" class="react_p fas fa-thumbs-up fa-2x"></i>
+  <i onclick="dislike()" class="react_p fas fa-thumbs-down fa-2x"></i>
+
+
+
+  <script>
+    function index() {
+      location.assign("blog.html")
+    }
+    function like() {
+      alert("Thanks for the feedback!")
+    }
+    function dislike() {
+      alert("Thanks for the feedback!")
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+h1{
+  margin-left: 2rem;
+}
+p{
+  margin-left: 2rem;
+}
+h2{
+  margin-left: 2rem;
+}
+.react_p{
+  color: cadetblue;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+.react_p:hover{
+  color: navy;
+}

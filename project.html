@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand text-" href=""> <img src="images/logo.png" alt=""> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button onclick="index()" type="button" class="btn btn-outline-warning">Home</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="project()" type="button" class="btn btn-warning">Projects</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="podFunction()" type="button" class="btn btn-outline-warning">Podcast</button>
+        </li>
+
+        <li class="nav-item">
+          <button onclick="vizzFunction()" type="button" class="btn btn-outline-warning">Tableau</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="projects_card">
+    <img class="pr-image" src="images/fc6.png" alt="">
+    <div class="project_elements_1">
+      <div class="cards_p mb-3" style="max-width: 1000px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin-left: 1rem; margin-top: 3rem;width: 200px;" src="images/book.png" class="card-img"
+              alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Face Recognition</h5>
+              <p class="card-text">This app is driven by data and machine learning model. As soon as user upload the
+                image, in background it convert into grayscale, crop face, convert into eigen image and finally it model
+                to predict. All this functionality dumped in the flask app.</p>
+              <p style="color:white;">Date :13 July 2020 </p>
+              <button onclick="faceFunction()" type="button" class="btn btn-warning">Know More..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project_elements">
+      <div class="cards_p mb-3" style="max-width: 1000px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin-left: 1rem; margin-top: 3rem;width: 200px;" src="images/book.png" class="card-img"
+              alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Covid-19 Predictor</h5>
+              <p class="card-text">It predict the no of Covid-19 cases in India in coming 7 days.We have used
+                time-series dataset from kaggle for the prediction. The Machine learning algorithm used is Polynomial
+                Regression.</p>
+              <p style="color:white;">Date :12 Aprail 2020 Team- Ankit Mishra, Akul Maurya, Avneesh Shukla</p>
+              <button onclick="covidFunction()" type="button" class="btn btn-warning">Know More..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project_elements">
+      <div class="cards_p mb-3" style="max-width: 1000px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin-left: 1rem; margin-top: 2rem;width: 200px;" src="images/book.png" class="card-img"
+              alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Transport Website</h5>
+              <p class="card-text">This is our first paid project as a team. The main functionality is to attach fleet
+                details and consignment booking.</p>
+              <p style="color:white;">Date :26 August 2020. Team- Ankit Mishra and Akul Maurya</p>
+              <button onclick="tranFunction()" type="button" class="btn btn-warning">Know More..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function faceFunction() {
+      location.assign("https://rexxion-faceapp.herokuapp.com/")
+    }
+    function covidFunction() {
+      location.assign("http://www.c19-case-predictor.live")
+    }
+    function tranFunction() {
+      location.assign("http://www.dwarikatransport.in")
+    }
+    function project() {
+      location.assign("project.html")
+    }
+    function index() {
+      location.assign("index.html")
+    }
+    function podFunction() {
+      location.assign("https://anchor.fm/the-rexxion-show")
+    }
+    function vizzFunction() {
+      location.assign("https://public.tableau.com/profile/ankit.mishra2407#!/")
+    }
+  </script>
+</body>
+
+</html>
